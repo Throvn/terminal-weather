@@ -15,9 +15,6 @@ geocode.geocodeAddress(argv.address, (errorMessage, results) => {
   if (errorMessage) {
     console.log(errorMessage);
   } else {
-    console.log(results.address);
-
-
     weather.getWeather(results.longitude, results.latitude, (error, weatherResults) => {
       if(error){
         console.log(error);
